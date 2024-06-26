@@ -31,6 +31,13 @@ services:
       dockerfile: composer.dockerfile
     volumes:
       - ./web:/var/www/html
+  artisan:
+    build:
+      context: ./php
+      dockerfile: php.dockerfile
+    volumes:
+      - ./web:/var/www/html
+    entrypoint: ["php", "/var/www/html/artisan"]
       
 networks:
   shinyclean-net:
