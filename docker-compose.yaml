@@ -25,6 +25,16 @@ services:
       - ./mysql/mysql.env
     networks:
       - shinyclean-net
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - 8080:80
+    networks:
+      - shinyclean-net
   composer:
     build:
       context: ./composer
