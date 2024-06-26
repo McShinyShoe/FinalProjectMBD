@@ -38,6 +38,12 @@ services:
     volumes:
       - ./web:/var/www/html
     entrypoint: ["php", "/var/www/html/artisan"]
+  npm:
+    image: node:alpine
+    working_dir: /var/www/html
+    entrypoint: ["npm"]
+    volumes:
+      - ./web:/var/www/html
       
 networks:
   shinyclean-net:
