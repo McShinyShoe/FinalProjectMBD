@@ -1,0 +1,37 @@
+services:
+  app:
+    image: nginx:stable-alpine
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./web:/var/www/html
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - shinyclean-net
+  php:
+    build:
+      context: ./php
+      dockerfile: php.dockerfile
+    volumes:
+      - ./web:/var/www/html
+    networks:
+      - shinyclean-net
+  mysql:
+    image: mysql:latest
+    env_file:
+      - ./mysql/mysql.env
+    networks:
+      - shinyclean-net
+  composer:
+    build:
+      context: ./composer
+      dockerfile: composer.dockerfile
+    volumes:
+      - ./web:/var/www/html
+      
+networks:
+  shinyclean-net:
+    driver: bridge
