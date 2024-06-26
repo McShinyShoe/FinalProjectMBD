@@ -31,6 +31,8 @@ services:
       dockerfile: composer.dockerfile
     volumes:
       - ./web:/var/www/html
+    networks:
+      - shinyclean-net
   artisan:
     build:
       context: ./php
@@ -38,12 +40,16 @@ services:
     volumes:
       - ./web:/var/www/html
     entrypoint: ["php", "/var/www/html/artisan"]
+    networks:
+      - shinyclean-net
   npm:
     image: node:alpine
     working_dir: /var/www/html
     entrypoint: ["npm"]
     volumes:
       - ./web:/var/www/html
+    networks:
+      - shinyclean-net
       
 networks:
   shinyclean-net:
