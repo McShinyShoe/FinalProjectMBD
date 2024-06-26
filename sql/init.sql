@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS Items (
     Items_Orders_ID int  NOT NULL,
     PRIMARY KEY (Items_ID),
     FOREIGN KEY Items_Service (Items_Services_ID) REFERENCES Services (Services_ID),
-    FOREIGN KEY Items_Orders (Items_Orders_ID) REFERENCES `Orders` (Orders_ID)
+    FOREIGN KEY Items_Orders (Items_Orders_ID) REFERENCES Orders (Orders_ID)
 );
 
 -- Table: Payments
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS Payments (
     Payments_Amount decimal(8,2)  NOT NULL,
     Orders_Orders_ID int  NOT NULL,
     PRIMARY KEY (Payments_ID),
-    FOREIGN KEY Payments_Orders (Orders_Orders_ID) REFERENCES `Orders` (Orders_ID)
+    FOREIGN KEY Payments_Orders (Orders_Orders_ID) REFERENCES Orders (Orders_ID)
 );
 
 -- Table: ServicePrices
