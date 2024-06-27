@@ -3,7 +3,7 @@ DOCKER_COMPOSE=docker compose
 clean:
 	${DOCKER_COMPOSE} down
 
-all: clean app wait-mysql composer-install migrate seed
+all: clean app wait-mysql composer-install migrate
 
 app:
 	${DOCKER_COMPOSE} up -d app
