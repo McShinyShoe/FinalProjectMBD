@@ -2,6 +2,10 @@
 @section('title', 'ShinyClean Login')
 @section('content')
 
+@php
+$isEmpty = true
+@endphp
+
 @if(auth()->user())
 @foreach ($customers as $customer)
   @if(auth()->user()->email == $customer->Customers_EMail)
@@ -14,6 +18,9 @@
   <div class="row">
     @foreach ($orders as $order)
       @if($userid == $order->Orders_Customers_ID)
+      @php
+        $isEmpty = false
+      @endphp
       <div class="col-sm-4 bg-primary p-3 m-2 rounded text-white">
         @if($order->Orders_TakeDate)
           <h3>Order ID {{$order->Orders_ID}} (FINISHED)</h3>
@@ -30,6 +37,11 @@
       </div>
       @endif
     @endforeach
+    @if($isEmpty)
+    <div class="container text-center">
+      <h3>User havent made any orders.</h3>
+    </div>
+    @endif
     <!-- <div class="col-sm-4">
       <h3>Column 2</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
