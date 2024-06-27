@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Orders', function (Blueprint $table) {
-            $table->integer('Orders_ID')->nullable(false);                                        // Orders_ID int  NOT NULL,
+            $table->integer('Orders_ID')->nullable(false)->autoIncrement();                                        // Orders_ID int  NOT NULL,
             $table->integer('Orders_Days')->nullable(false);                                      // Orders_Days int  NOT NULL,
             $table->date('Orders_StartDate')->nullable(false);                                    // Orders_StartDate date  NOT NULL,
             $table->date('Orders_TakeDate')->nullable(true);                                     // Orders_TakeDate date  NULL,

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Customers', function (Blueprint $table) {
-            $table->integer('Customers_ID')->nullable(false);             // Customers_ID int  NOT NULL,
+            $table->integer('Customers_ID')->nullable(false)->autoIncrement();             // Customers_ID int  NOT NULL,
             $table->string('Customers_Name', 32)->nullable(false);        // Customers_Name varchar(32)  NOT NULL,
             $table->string('Customers_EMail', 256)->nullable(false); // Customers_PhoneNumber varchar(15)  NOT NULL,
             $table->string('Customers_PhoneNumber', 15)->nullable(false); // Customers_PhoneNumber varchar(15)  NOT NULL,

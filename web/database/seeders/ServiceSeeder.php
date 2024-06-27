@@ -17,15 +17,15 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         DB::table('Services')->insert([
-            ['Services_ID' => 0, 'Services_Name' => 'Cuci Kering', 'Services_UnitType' => 'Berat'],
-            ['Services_ID' => 1, 'Services_Name' => 'Cuci Setrika', 'Services_UnitType' => 'Berat'],
-            ['Services_ID' => 2, 'Services_Name' => 'Jasa Setrika', 'Services_UnitType' => 'Berat'],
-            ['Services_ID' => 3, 'Services_Name' => 'Sprei Kecil', 'Services_UnitType' => 'Satuan'],
-            ['Services_ID' => 4, 'Services_Name' => 'Sprei Besar', 'Services_UnitType' => 'Satuan'],
-            ['Services_ID' => 5, 'Services_Name' => 'Selimut Tipis', 'Services_UnitType' => 'Satuan'],
-            ['Services_ID' => 6, 'Services_Name' => 'Selimut Tebal', 'Services_UnitType' => 'Satuan'],
-            ['Services_ID' => 7, 'Services_Name' => 'Bed Cover Queen', 'Services_UnitType' => 'Satuan'],
-            ['Services_ID' => 8, 'Services_Name' => 'Bed Cover King', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 1, 'Services_Name' => 'Cuci Kering', 'Services_UnitType' => 'Berat'],
+            ['Services_ID' => 2, 'Services_Name' => 'Cuci Setrika', 'Services_UnitType' => 'Berat'],
+            ['Services_ID' => 3, 'Services_Name' => 'Jasa Setrika', 'Services_UnitType' => 'Berat'],
+            ['Services_ID' => 4, 'Services_Name' => 'Sprei Kecil', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 5, 'Services_Name' => 'Sprei Besar', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 6, 'Services_Name' => 'Selimut Tipis', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 7, 'Services_Name' => 'Selimut Tebal', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 8, 'Services_Name' => 'Bed Cover Queen', 'Services_UnitType' => 'Satuan'],
+            ['Services_ID' => 9, 'Services_Name' => 'Bed Cover King', 'Services_UnitType' => 'Satuan'],
         ]);
     }
 }

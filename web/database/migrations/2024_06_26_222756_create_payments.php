@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Payments', function (Blueprint $table) {
-            $table->integer('Payments_ID')->nullable(false);                                // Payments_ID int  NOT NULL,
+            $table->integer('Payments_ID')->nullable(false)->autoIncrement();                                // Payments_ID int  NOT NULL,
             $table->decimal('Payments_Amount', 8, 2)->nullable(false);                      // Payments_Amount decimal(8,2)  NOT NULL,
             $table->integer('Orders_Orders_ID')->nullable(false);                           // Orders_Orders_ID int  NOT NULL,
             $table->primary('Payments_ID');                                                 // PRIMARY KEY (Payments_ID),
