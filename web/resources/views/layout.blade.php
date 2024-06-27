@@ -9,7 +9,7 @@
 <body>
 <div class="container-fluid p-5 bg-primary text-white text-center">
   <h1 class="fw-bold">{{config('app.name')}}</h1>
-  <h3>Wash now or naked tomorrow</h3>
+  <h3>Laundry Today or Naked Tomorow</h3>
   @if(auth()->user())
     <p>Welcome back {{auth()->user()->name}}!</p>
   @endif
