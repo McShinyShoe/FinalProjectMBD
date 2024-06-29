@@ -25,5 +25,11 @@ seed:
 wait-mysql:
 	sleep 10
 
+npm-req:
+	${DOCKER_COMPOSE} run --rm npm install	
+
+npm-build:
+	${DOCKER_COMPOSE} run --rm npm run build
+
 composer-install:
 	docker compose run composer install

@@ -4,9 +4,9 @@
 @section('content')
 
 @php
-$isEmpty = true;
-$userid = '';
+$isEmpty = true
 @endphp
+
 @if(auth()->user())
 @foreach ($customers as $customer)
   @if(auth()->user()->email == $customer->Customers_EMail)

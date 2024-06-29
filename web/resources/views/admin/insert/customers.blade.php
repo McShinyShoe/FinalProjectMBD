@@ -1,10 +1,10 @@
 @extends('layout')
-@section('active', 'login')
+@section('active', 'insert_customers')
 @section('title', 'ShinyClean Login')
 @section('content')
 
 <div class="container">
-    <form action="{{route('login.post')}}" method="POST" style="width: 500px" class="ms-auto me-auto mt-5 mb-5">
+    <form action="{{route('insert.customers.post')}}" method="POST" style="width: 500px" class="ms-auto me-auto mt-5 mb-5">
         @csrf
         <div class="mt-5">
             @if($errors->any())
@@ -20,22 +20,29 @@
             @endif
 
             @if(session()->has('success'))
-                <div class="alert alert-danger">{{session('success')}}</div>
+                <div class="alert alert-success">{{session('success')}}</div>
             @endif
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name">
         </div>
         <div class="mb-3">
             <label class="form-label">Email address</label>
             <input type="email" class="form-control" name="email">
         </div>
         <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
+            <label class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" name="address">
         </div>
         <!-- <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div> -->
-        <div class="form-text mb-2">Dont have an account? <a href="/register">Register</a></div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

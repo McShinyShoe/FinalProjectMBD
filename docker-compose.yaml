@@ -25,6 +25,8 @@ services:
       - ./mysql/mysql.env
     networks:
       - shinyclean-net
+    ports:
+      - 3306:3306
   phpmyadmin:
     depends_on:
       - mysql

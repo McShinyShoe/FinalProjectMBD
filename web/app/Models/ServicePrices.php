@@ -16,6 +16,7 @@ class ServicePrices extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'ServicePrices_Services_ID',
         'ServicePrices_Days',
         'ServicePrices_PricePerUnit',
     ];

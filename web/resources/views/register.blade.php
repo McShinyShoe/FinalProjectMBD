@@ -1,4 +1,5 @@
 @extends('layout')
+@section('active', 'register')
 @section('title', 'ShinyClean Login')
 @section('content')
 

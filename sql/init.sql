@@ -3,7 +3,8 @@ CREATE TABLE IF NOT EXISTS Customers (
     Customers_ID int  NOT NULL,
     Customers_Name varchar(32)  NOT NULL,
     Customers_PhoneNumber varchar(15)  NOT NULL,
-    Customers_Address varchar(255)  NULL,
+    Customers_EMail varchar(256)  NULL,
+    Customers_Address varchar(256)  NULL,
     PRIMARY KEY (Customers_ID)
 );
 
